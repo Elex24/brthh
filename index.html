@@ -151,6 +151,16 @@
   <audio id="music" src="./mus/happ.wav" preload="auto " loop></audio>
 
   <script>
+
+        setInterval(() => {
+  const before = performance.now();
+  debugger;
+  const after = performance.now();
+  if (after - before > 100) {
+    document.body.innerHTML = "<h1 style='color:red;'>Доступ запрещён</h1>";
+  }
+}, 1000);
+    
     document.addEventListener('contextmenu', e => e.preventDefault()); // блокирует ПКМ
 document.addEventListener('keydown', function (e) {
   if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c' || e.key === 'F12')) {
